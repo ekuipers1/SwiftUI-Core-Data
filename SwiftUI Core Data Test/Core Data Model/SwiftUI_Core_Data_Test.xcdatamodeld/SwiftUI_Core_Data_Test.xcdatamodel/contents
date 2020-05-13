@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F83c" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Attribute" representedClassName="Attribute" syncable="YES">
+        <attribute name="itemdescription" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="order" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="item" maxCount="1" deletionRule="Nullify" destinationEntity="Item" inverseName="attribute" inverseEntity="Item"/>
+    </entity>
+    <entity name="Item" representedClassName="Item" syncable="YES">
+        <attribute name="itemdescription" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+        <attribute name="order" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="selected" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <relationship name="attribute" toMany="YES" deletionRule="Cascade" destinationEntity="Attribute" inverseName="item" inverseEntity="Attribute"/>
+    </entity>
+    <elements>
+        <element name="Attribute" positionX="-302.68359375" positionY="-76.6796875" width="128" height="103"/>
+        <element name="Item" positionX="-70.93359375" positionY="-78.27734375" width="128" height="118"/>
+    </elements>
+</model>
